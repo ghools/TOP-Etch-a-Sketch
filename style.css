@@ -3,3 +3,24 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+.container {
+    display: flexbox;
+
+}
+
+.sketchpad {
+    height: auto;
+    width: auto;
+    border: 1px solid black;
+}
+
+.sketchpadRow {
+    height: 100px;
+    width: auto;
+    border-style: solid;
+    border-color: black;
+    display: grid;
+    grid-template-columns: repeat(16, minmax(0, 1fr));
+    background-color: antiquewhite;
+}
