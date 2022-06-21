@@ -6,10 +6,8 @@ function createGrid() {
         const sketchpadRow = createRow();
         for(let j = 0; j < 16; j++) {
             const sketchpad = createSketchpad (sketchpadRow);
-            if(j === 15){
                 sketchpadRow.appendChild(sketchpad);
             }
-        }
     }
     
     
@@ -25,5 +23,15 @@ function createSketchpad (sketchpadRow) {
     const sketchpad = document.createElement("div")
     sketchpad.className = "sketchpad";
     sketchpadRow.appendChild(sketchpad);
+    sketchpad.addEventListener("mouseover", sketch);
     return sketchpad;
 }
+
+function sketch (e) {
+    let randomColor = Math.floor(Math.random()*16777215).toString(16);
+    randomColor = "#" + randomColor;
+    e.target.style.backgroundColor = randomColor
+}
+
+
+createGrid()
