@@ -6,6 +6,9 @@ function createGrid() {
         const sketchpadRow = createRow();
         for(let j = 0; j < 16; j++) {
             const sketchpad = createSketchpad (sketchpadRow);
+            if(j === 15){
+                sketchpadRow.appendChild(sketchpad);
+            }
         }
     }
     
