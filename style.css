@@ -7,23 +7,24 @@
 .container {
     display: flex;
     flex-direction: column;
+    width: 1500px;
+    height: 1500px;
 
 }
 
 .sketchpad {
     height: auto;
     width: auto;
-    border: 1px solid black;
     flex: 1;
 }
 
 .sketchpadRow {
     height: 100px;
     width: auto;
-    border:  2px solid black;
+    border: 1px solid black;
     display: flex;
 }
 
 .sketch {
-    background-color: aquamarine;
+    background-color: rgba(red, green, blue, alpha);
 }

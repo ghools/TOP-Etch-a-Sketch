@@ -1,13 +1,13 @@
 const container = document.querySelector(".container");
 
 
-function createGrid() {
-    for(let i = 0; i < 16; i++){
+function createGrid(gridSize = 16) {
+    for(let i = 0; i < gridSize; i++){
         const sketchpadRow = createRow();
-        for(let j = 0; j < 16; j++) {
+        for(let j = 0; j < gridSize; j++) {
             const sketchpad = createSketchpad (sketchpadRow);
-                sketchpadRow.appendChild(sketchpad);
-            }
+            sketchpadRow.appendChild(sketchpad);
+        }
     }
     
     
@@ -34,4 +34,16 @@ function sketch (e) {
 }
 
 
-createGrid()
+
+function newGrid() {
+    const container = document.getElementsByClassName("container")[0];
+    console.log(container)
+    container.innerHTML = ""
+    gridSize = prompt("How big do you want the grid to be? MAX OF 100");
+    if(gridSize > 100) {
+        return;
+    }
+    createGrid(gridSize);
+};
+
+createGrid ()
