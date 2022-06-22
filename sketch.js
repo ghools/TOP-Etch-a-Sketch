@@ -36,7 +36,7 @@ function sketch (e) {
 
 
 function newGrid() {
-    const container = document.getElementsByClassName("container")[0];
+    const container = document.getElementsByClassName("container")[0]; 
     console.log(container)
     container.innerHTML = ""
     gridSize = prompt("How big do you want the grid to be? MAX OF 100");
